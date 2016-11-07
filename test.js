@@ -52,3 +52,31 @@ test('should use `app.registered` prop if it is object and already exist', funct
   test.strictEqual(count, 33)
   done()
 })
+
+test('should has `_pluginName` property containing last register plugin', function (done) {
+  var app = new MiniBase()
+  app.use(isRegistered())
+
+  app.use(function plugin (self) {
+    if (self.isRegistered('base-foo')) return
+    self.first = 1
+    test.strictEqual(self._pluginName, 'base-foo')
+  })
+
+  test.strictEqual(app.first, 1)
+  test.strictEqual(app._pluginName, 'base-foo')
+
+  app.use(function plugin (self) {
+    test.strictEqual(self._pluginName, 'base-foo')
+    test.strictEqual(self.first, 1)
+    if (self.isRegistered('base-qux')) return
+    self.second = 2
+    test.strictEqual(self._pluginName, 'base-qux')
+  })
+
+  test.strictEqual(app.first, 1)
+  test.strictEqual(app.second, 2)
+  test.strictEqual(app._pluginName, 'base-qux')
+
+  done()
+})

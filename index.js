@@ -82,6 +82,7 @@ module.exports = function minibaseIsRegistered (opts) {
       if (self.registered.hasOwnProperty(name)) {
         return true
       }
+      self._pluginName = name
       self.registered[name] = true
       return false
     })
