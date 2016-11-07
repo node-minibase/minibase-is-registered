@@ -48,15 +48,25 @@
     "tasks": [
       "readme"
     ],
-    "lint": {
-      "reflinks": true
-    },
     "related": {
-      "list": []
+      "list": [
+        "minibase",
+        "base",
+        "is-registered",
+        "try-catch-core",
+        "always-done"
+      ]
     },
     "reflinks": [
       "base",
-      "minibase"
-    ]
+      "minibase",
+      "always-done",
+      "async-done",
+      "dezalgo",
+      "once"
+    ],
+    "lint": {
+      "reflinks": true
+    }
   }
 }
