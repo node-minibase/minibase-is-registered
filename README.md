@@ -20,6 +20,60 @@ const minibaseIsRegistered = require('minibase-is-registered')
 
 ## API
 
+### [minibaseIsRegistered](index.js#L36)
+> Adds `.isRegistered` method to your application. That `opts` option is optional and does nothing. It is just convention each plugin to export function that returns a plugin.
+
+**Params**
+
+* `opts` **{Object}**: optional, no options currently    
+* `returns` **{Function}**: plugin that can be pass to [base][]/[minibase][]'s `.use` method  
+
+**Example**
+
+```js
+var isRegistered = require('minibase-is-registered')
+
+var MiniBase = require('minibase').MiniBase
+var app = new MiniBase()
+app.use(isRegistered())
+
+// or as Base plugin
+
+var Base = require('base')
+var base = new Base()
+base.use(isRegistered())
+```
+
+### [.isRegistered](index.js#L76)
+> Checks if given `name` exists in `app.registered` cache object, to detect if should call the plugin or not.
+
+**Params**
+
+* `name` **{String}**: name of the plugin    
+* `returns` **{Boolean}**: always boolean `true` or `false`  
+
+**Example**
+
+```js
+app.use(isRegistered())
+
+var called = 0
+
+function fakePlugin () {
+  return function foo (app) {
+    if (app.isRegistered('foo')) return
+    called = called + 22
+  }
+}
+
+app.use(fakePlugin())
+app.use(fakePlugin())
+
+// the plugin `fakePlugin` is called only once
+// if it was called two times `called` will be 44
+console.log(called) // => 22
+```
+
 ## Contributing
 Pull requests and stars are always welcome. For bugs and feature requests, [please create an issue](https://github.com/node-minibase/minibase-is-registered/issues/new).  
 But before doing anything, please read the [CONTRIBUTING.md](./CONTRIBUTING.md) guidelines.
@@ -27,6 +81,9 @@ But before doing anything, please read the [CONTRIBUTING.md](./CONTRIBUTING.md) 
 ## [Charlike Make Reagent](http://j.mp/1stW47C) [![new message to charlike][new-message-img]][new-message-url] [![freenode #charlike][freenode-img]][freenode-url]
 
 [![tunnckoCore.tk][author-www-img]][author-www-url] [![keybase tunnckoCore][keybase-img]][keybase-url] [![tunnckoCore npm][author-npm-img]][author-npm-url] [![tunnckoCore twitter][author-twitter-img]][author-twitter-url] [![tunnckoCore github][author-github-img]][author-github-url]
+
+[base]: https://github.com/node-base/base
+[minibase]: https://github.com/node-minibase/minibase
 
 [npmjs-url]: https://www.npmjs.com/package/minibase-is-registered
 [npmjs-img]: https://img.shields.io/npm/v/minibase-is-registered.svg?label=minibase-is-registered
@@ -73,5 +130,3 @@ But before doing anything, please read the [CONTRIBUTING.md](./CONTRIBUTING.md) 
 [new-message-url]: https://github.com/tunnckoCore/ama
 [new-message-img]: https://img.shields.io/badge/ask%20me-anything-green.svg
 
-[base]: https://github.com/node-base/base
-[minibase]: https://github.com/node-minibase/minibase
