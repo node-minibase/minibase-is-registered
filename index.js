@@ -35,6 +35,11 @@
 
 module.exports = function minibaseIsRegistered (opts) {
   return function minibaseIsRegistered (self) {
+    /* istanbul ignore next */
+    if (self.isRegistered && self.isRegistered('is-registered')) {
+      return
+    }
+
     var registered = self.registered && typeof self.registered === 'object'
       ? self.registered
       : {}
