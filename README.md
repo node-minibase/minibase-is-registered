@@ -1,3 +1,9 @@
+<p align="center">
+  <a href="https://github.com/node-minibase">
+    <img height="250" width="250" src="https://avatars1.githubusercontent.com/u/23032863?v=3&s=250">
+  </a>
+</p>
+
 # [minibase-is-registered][author-www-url] [![npmjs.com][npmjs-img]][npmjs-url] [![The MIT License][license-img]][license-url] [![npm downloads][downloads-img]][downloads-url] 
 
 > Plugin for [minibase][] and [base][], that adds `isRegistered` method to your application to detect if plugin is already registered and returns true or false if named plugin is already registered on the instance.
@@ -44,7 +50,7 @@ var base = new Base()
 base.use(isRegistered())
 ```
 
-### [.isRegistered](index.js#L76)
+### [.isRegistered](index.js#L81)
 > Checks if given `name` exists in `app.registered` cache object, to detect if should call the plugin or not.
 
 **Params**
@@ -89,8 +95,12 @@ But before doing anything, please read the [CONTRIBUTING.md](./CONTRIBUTING.md) 
 
 [![tunnckoCore.tk][author-www-img]][author-www-url] [![keybase tunnckoCore][keybase-img]][keybase-url] [![tunnckoCore npm][author-npm-img]][author-npm-url] [![tunnckoCore twitter][author-twitter-img]][author-twitter-url] [![tunnckoCore github][author-github-img]][author-github-url]
 
+[always-done]: https://github.com/hybridables/always-done
+[async-done]: https://github.com/gulpjs/async-done
 [base]: https://github.com/node-base/base
+[dezalgo]: https://github.com/npm/dezalgo
 [minibase]: https://github.com/node-minibase/minibase
+[once]: https://github.com/isaacs/once
 
 [npmjs-url]: https://www.npmjs.com/package/minibase-is-registered
 [npmjs-img]: https://img.shields.io/npm/v/minibase-is-registered.svg?label=minibase-is-registered
@@ -137,7 +147,3 @@ But before doing anything, please read the [CONTRIBUTING.md](./CONTRIBUTING.md) 
 [new-message-url]: https://github.com/tunnckoCore/ama
 [new-message-img]: https://img.shields.io/badge/ask%20me-anything-green.svg
 
-[always-done]: https://github.com/hybridables/always-done
-[async-done]: https://github.com/gulpjs/async-done
-[dezalgo]: https://github.com/npm/dezalgo
-[once]: https://github.com/isaacs/once
