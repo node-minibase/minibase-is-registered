@@ -58,7 +58,12 @@
   },
   "verb": {
     "run": true,
-    "toc": true,
+    "toc": {
+      "render": true,
+      "method": "preWrite",
+      "maxdepth": 3,
+      "footer": ""
+    },
     "layout": "empty",
     "tasks": [
       "readme"
@@ -73,12 +78,16 @@
       ]
     },
     "reflinks": [
-      "base",
-      "minibase",
       "always-done",
       "async-done",
+      "base",
       "dezalgo",
-      "once"
+      "minibase",
+      "once",
+      "commitizen",
+      "standard-version",
+      "verb",
+      "verb-generate-readme"
     ],
     "lint": {
       "reflinks": true
