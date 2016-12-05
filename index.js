@@ -1,7 +1,7 @@
 /*!
  * minibase-is-registered <https://github.com/node-minibase/minibase-is-registered>
  *
- * Copyright (c) Charlike Mike Reagent <@tunnckoCore> (http://www.tunnckocore.tk)
+ * Copyright (c) Charlike Mike Reagent <@tunnckoCore> (http://i.am.charlike.online)
  * Released under the MIT license.
  */
 
