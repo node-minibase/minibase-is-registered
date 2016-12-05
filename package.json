@@ -1,6 +1,6 @@
 {
   "name": "minibase-is-registered",
-  "version": "1.1.3",
+  "version": "1.1.4",
   "description": "Plugin for [minibase][] and [base][], that adds `isRegistered` method to your application to detect if plugin is already registered and returns true or false if named plugin is already registered on the instance.",
   "repository": "node-minibase/minibase-is-registered",
   "author": "Charlike Mike Reagent <@tunnckoCore> (http://i.am.charlike.online)",

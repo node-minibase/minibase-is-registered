@@ -2,6 +2,16 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+<a name="1.1.4"></a>
+## [1.1.4](https://github.com/node-minibase/minibase-is-registered/compare/v1.1.3...v1.1.4) (2016-12-05)
+
+
+### Bug Fixes
+
+* **appveyor:** allow failures ([9855252](https://github.com/node-minibase/minibase-is-registered/commit/9855252))
+
+
+
 <a name="1.1.3"></a>
 ## [1.1.3](https://github.com/node-minibase/minibase-is-registered/compare/v1.1.2...v1.1.3) (2016-12-05)
 
