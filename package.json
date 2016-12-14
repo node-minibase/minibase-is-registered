@@ -22,7 +22,7 @@
   },
   "dependencies": {},
   "devDependencies": {
-    "commitizen": "~2.7.0",
+    "commitizen": "~2.8.7",
     "coveralls": "^2.11.15",
     "cz-conventional-changelog": "1.1.5",
     "minibase": "^1.0.0",
