@@ -2,6 +2,16 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+<a name="1.1.6"></a>
+## [1.1.6](https://github.com/node-minibase/minibase-is-registered/compare/v1.1.5...v1.1.6) (2017-04-01)
+
+
+### Bug Fixes
+
+* **readme:** fix link of github tag badge ([aff4d65](https://github.com/node-minibase/minibase-is-registered/commit/aff4d65))
+
+
+
 <a name="1.1.5"></a>
 ## [1.1.5](https://github.com/node-minibase/minibase-is-registered/compare/v1.1.4...v1.1.5) (2017-04-01)
 
