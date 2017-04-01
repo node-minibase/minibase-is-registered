@@ -2,6 +2,17 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+<a name="1.1.5"></a>
+## [1.1.5](https://github.com/node-minibase/minibase-is-registered/compare/v1.1.4...v1.1.5) (2017-04-01)
+
+
+### Bug Fixes
+
+* **boilerplate:** update repo, use dush-methods ([0128b31](https://github.com/node-minibase/minibase-is-registered/commit/0128b31)), closes [#8](https://github.com/node-minibase/minibase-is-registered/issues/8)
+* **package:** add missing "dush-methods" dep ([1a8e06b](https://github.com/node-minibase/minibase-is-registered/commit/1a8e06b))
+
+
+
 <a name="1.1.4"></a>
 ## [1.1.4](https://github.com/node-minibase/minibase-is-registered/compare/v1.1.3...v1.1.4) (2016-12-05)
 
