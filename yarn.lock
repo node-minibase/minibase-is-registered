@@ -788,6 +788,10 @@ duplexer@~0.1.1:
   version "0.1.1"
   resolved "https://registry.yarnpkg.com/duplexer/-/duplexer-0.1.1.tgz#ace6ff808c1ce66b57d1ebf97977acb02334cfc1"
 
+dush-methods@^1.0.1:
+  version "1.0.1"
+  resolved "https://registry.yarnpkg.com/dush-methods/-/dush-methods-1.0.1.tgz#f3d71d8d5967d839462119e7490c90a9e8aa9a65"
+
 end-of-stream@~0.1.5:
   version "0.1.5"
   resolved "https://registry.yarnpkg.com/end-of-stream/-/end-of-stream-0.1.5.tgz#8e177206c3c80837d85632e8b9359dfe8b2f6eaf"
@@ -2159,13 +2163,9 @@ lodash.templatesettings@^4.0.0:
   dependencies:
     lodash._reinterpolate "~3.0.0"
 
-lodash@4.6.1:
+lodash@4.6.1, lodash@^4.0.0, lodash@^4.2.0, lodash@^4.2.1, lodash@^4.3.0:
   version "4.6.1"
   resolved "https://registry.yarnpkg.com/lodash/-/lodash-4.6.1.tgz#df00c1164ad236b183cfc3887a5e8d38cc63cbbc"
-
-lodash@^4.0.0, lodash@^4.2.0, lodash@^4.2.1, lodash@^4.3.0:
-  version "4.17.2"
-  resolved "https://registry.yarnpkg.com/lodash/-/lodash-4.17.2.tgz#34a3055babe04ce42467b607d700072c7ff6bf42"
 
 lodash@~1.0.1:
   version "1.0.2"
