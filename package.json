@@ -20,7 +20,7 @@
     "commit": "npm-run-all -s test git"
   },
   "dependencies": {
-    "dush-methods": "^1.0.1"
+    "dush-methods": "^1.0.2"
   },
   "devDependencies": {
     "commitizen": "~2.7.0",
