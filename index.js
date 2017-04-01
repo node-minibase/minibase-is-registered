@@ -1,11 +1,13 @@
 /*!
  * minibase-is-registered <https://github.com/node-minibase/minibase-is-registered>
  *
- * Copyright (c) Charlike Mike Reagent <@tunnckoCore> (http://i.am.charlike.online)
+ * Copyright (c) Charlike Mike Reagent <@tunnckoCore> (https://i.am.charlike.online)
  * Released under the MIT license.
  */
 
 'use strict'
+
+var methods = require('dush-methods')
 
 /**
  * > Adds `.isRegistered` method to your application. That
@@ -39,6 +41,8 @@ module.exports = function minibaseIsRegistered (opts) {
     if (self.isRegistered && self.isRegistered('is-registered')) {
       return
     }
+
+    self.use(methods())
 
     var registered = self.registered && typeof self.registered === 'object'
       ? self.registered

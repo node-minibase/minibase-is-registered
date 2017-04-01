@@ -1,35 +1,34 @@
 {
   "name": "minibase-is-registered",
   "version": "1.1.4",
-  "description": "Plugin for [minibase][] and [base][], that adds `isRegistered` method to your application to detect if plugin is already registered and returns true or false if named plugin is already registered on the instance.",
+  "description": "Plugin for [dush][], [minibase][] and [base][], that adds `isRegistered` method to your application to detect if plugin is already registered and returns true or false if named plugin is already registered on the instance",
   "repository": "node-minibase/minibase-is-registered",
-  "author": "Charlike Mike Reagent <@tunnckoCore> (http://i.am.charlike.online)",
+  "author": "Charlike Mike Reagent <@tunnckoCore> (https://i.am.charlike.online)",
   "precommit.silent": true,
   "main": "index.js",
   "license": "MIT",
   "scripts": {
-    "lint": "standard --verbose",
-    "pretest": "npm run lint",
-    "test": "npm run coverage",
-    "posttest": "npm run lint:coverage",
-    "coverage": "nyc node test.js",
-    "lint:coverage": "nyc check-coverage --lines 100 --branches 100 --statements 100 --functions 100",
-    "report-coverage": "nyc report --reporter=text-lcov | coveralls",
+    "lint": "standard index.js test.js --fix --verbose",
+    "test": "npm-run-all -s lint test:*",
+    "test:api": "nyc --reporter lcov node test.js",
+    "test:report": "nyc report",
     "prerelease": "npm test",
     "release": "standard-version --sign --no-verify",
-    "precommit": "git add --all",
-    "commit": "git-cz"
+    "git": "npm-run-all -s git:*",
+    "git:add": "git add --all",
+    "git:cz": "git-cz",
+    "commit": "npm-run-all -s test git"
   },
   "dependencies": {},
   "devDependencies": {
     "commitizen": "~2.7.0",
-    "coveralls": "^2.11.15",
     "cz-conventional-changelog": "1.1.5",
-    "minibase": "^1.0.0",
-    "mukla": "^0.4.8",
-    "nyc": "^10.0.0",
-    "pre-commit": "^1.1.3",
-    "standard": "^8.6.0",
+    "minibase": "^1.0.1",
+    "mukla": "^0.4.9",
+    "npm-run-all": "~3.1.2",
+    "nyc": "^10.2.0",
+    "pre-commit": "^1.2.2",
+    "standard": "^9.0.0",
     "standard-version": "^4.0.0"
   },
   "files": [
@@ -56,13 +55,19 @@
       "path": "./node_modules/cz-conventional-changelog"
     }
   },
+  "nyc": {
+    "check-coverage": true,
+    "statements": 100,
+    "functions": 100,
+    "branches": 100,
+    "lines": 100
+  },
   "verb": {
     "run": true,
     "toc": {
       "render": true,
       "method": "preWrite",
-      "maxdepth": 3,
-      "footer": ""
+      "maxdepth": 3
     },
     "layout": "empty",
     "tasks": [
@@ -70,24 +75,32 @@
     ],
     "related": {
       "list": [
-        "minibase",
-        "base",
-        "is-registered",
-        "try-catch-core",
+        "dush",
+        "dush-no-chaining",
+        "dush-promise",
+        "dush-tap-report",
+        "dush-methods",
+        "dush-options",
+        "minibase-create-plugin",
+        "minibase-better-define",
+        "minibase-visit",
+        "minibase-control-flow",
         "always-done"
-      ]
+      ],
+      "highlight": "minibase"
     },
     "reflinks": [
-      "always-done",
-      "async-done",
       "base",
-      "dezalgo",
-      "minibase",
-      "once",
+      "charlike",
       "commitizen",
+      "dush",
+      "minibase",
       "standard-version",
       "verb",
-      "verb-generate-readme"
+      "verb-generate-readme",
+      "async-done",
+      "collection-visit",
+      "each-promise"
     ],
     "lint": {
       "reflinks": true
