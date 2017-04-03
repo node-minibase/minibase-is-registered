@@ -53,6 +53,7 @@ module.exports = function minibaseIsRegistered (opts) {
     /**
      * > Checks if given `name` exists in `app.registered`
      * cache object, to detect if should call the plugin or not.
+     * It also returns `false` if not a string passed to it.
      *
      * **Example**
      *
@@ -83,6 +84,9 @@ module.exports = function minibaseIsRegistered (opts) {
      */
 
     self.define('isRegistered', function isRegistered (name) {
+      if (typeof name !== 'string') {
+        return false
+      }
       if (self.registered.hasOwnProperty(name)) {
         return true
       }
